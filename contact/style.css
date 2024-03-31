@@ -1,0 +1,244 @@
+body {
+  background-color: #ffffff;
+  height: 100vh;
+  margin: 0;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.432);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 888; /* Memastikan header berada di atas konten lainnya */
+}
+
+.logo-left img,
+.logo-right img {
+  width: 50px; /* Sesuaikan ukuran logo */
+  height: auto;
+  margin: 4px 5px;
+}
+
+.title {
+  font-size: 12px;
+  text-align: center;
+  flex-grow: 1; /* Mengisi ruang kosong di tengah */
+  font-family: "Font1", sans-serif; /* Menggunakan Font1, dengan sans-serif sebagai cadangan */
+}
+.card {
+  margin: 8% auto; /* Mengatur margin atas dan bawah menjadi 8%, dan margin kiri dan kanan menjadi otomatis (auto) */
+  width: 750px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  background-color: #fffffe;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.37);
+}
+
+.card::before {
+  content: "";
+  width: 750px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: 3px solid #fefefe;
+  background: linear-gradient(
+    40deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgb(250, 170, 22) 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.card * {
+  z-index: 1;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  background-color: #1468bf;
+  border-radius: 50%;
+  border: 4px solid #fefefe;
+  margin-top: 50px;
+  transition: all 0.5s ease;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.5s ease;
+}
+
+.card-info span {
+  font-weight: 600;
+  font-size: 24px;
+  color: #161a42;
+  margin-top: 15px;
+  line-height: 5px;
+}
+
+.card-info p {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  text-decoration: none;
+  background-color: #1468bf;
+  color: white;
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background-color: #ff6844;
+  transform: scale(1.1);
+}
+
+footer {
+  background-color: #525252;
+  color: #fff;
+  padding: 20px 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.bawah {
+  width: 100%;
+  max-width: 1200px; /* Optional: jika Anda ingin batasi lebar maksimum */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+}
+.footer-left p a {
+  text-decoration: none;
+  color: rgb(59, 193, 255);
+}
+.footer-left p a:hover {
+  color: white;
+}
+.footer-right nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-right nav ul li {
+  margin-right: 20px;
+}
+
+.footer-right nav ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-right nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-right nav ul li a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .card {
+    margin-top: 20%; /* Sesuaikan margin-top agar konten tidak terlalu dekat dengan header */
+    width: 400px;
+    height: auto;
+    margin-bottom: 30%;
+  }
+  .card::before {
+    width: 400px;
+    height: 100px;
+  }
+  footer {
+    bottom: 0;
+    padding: 15px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 440px) {
+
+  .card {
+    margin-top: 20%;
+    width: 350px;
+    height: auto;
+    margin-bottom: 30%;
+  }
+  .card::before {
+    width: 350px;
+    height: 100px;
+  }
+  .card-info span{
+    font-size: 20px;
+  }
+  .logo-left img,
+  .logo-right img {
+    width: 40px; /* Sesuaikan ukuran logo */
+  }
+  .title {
+    font-size: 11px;
+  }
+  footer {
+    padding: 15px 0; /* Ubah padding agar lebih ramping */
+  }
+  .bawah {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .footer-right nav ul {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-right nav ul li {
+    margin: 0 10px;
+  }
+}
