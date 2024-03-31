@@ -86,9 +86,7 @@ body {
     .title {
       font-size: 11px;
     }
-    .container{
-        margin-top: 12%;
-    }
+
     .gallery {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
